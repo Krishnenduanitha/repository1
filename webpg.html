@@ -1,0 +1,51 @@
+<HTML>
+    <htnl lang="en">
+    <head>
+    <meta charset="UTF-8"->
+    <meta name="viewport"content="width=device-width'initial-scale=1.0">
+    <title> my website </title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    </head>
+    <ul>
+    <li><a href="#"> Contact me </a></li>
+    <li><a href="#"> My Projects </a></li>
+    <li><a href="#"> Home </a></li>
+    </ul>
+    <section class="about">
+    <img src="placeholder.jpg" alt="profile picture" width="200" height="200">
+    <h1>Krishnendu A</h1>
+    <h3>About Me</h3>
+    <p>
+    I am a passionate and hardworking second year compuer science and engineering student looking forward for devoloping skills and improving knowledge in technological fields, open to taking challenges and opportunities.
+    </p>
+    </section>
+    <section class="contact">
+    <input type="email"id="mail"placeholder="enter email id">
+    <button onclick="sendemail()">click for connecting</button>
+    <footer>
+    <div class="social-icons">
+    <a href="https://www.instagram.com/accounts/login/?hl=en"><img src="insta.jpg"></a>
+    <a href="https://www.facebook.com/login/"><img src="facebook.jpg"></a>
+    <a href="https://www.whatsapp.com/"><img src="whtsp.jpg"></a>
+    <a href="https://www.linkedin.com/company/login"><img src="linkdn.jpg"></a>
+    </div>
+    <div document.addEventListener("DOMContentLoaded", function() {
+        const button = document.querySelector('.button');
+       
+        button.addEventListener('click', function() {
+            const emailInput = document.getElementById('mail');
+            const emailValue = emailInput.value.trim();
+    
+            if (emailValue) {
+                const mailtoLink = `mailto:ka.csb2327@saintgits.org?subject=User%20Email&body=User%20Email:%20${encodeURIComponent(emailValue)}`;
+                window.location.href = mailtoLink;
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+    });
+ </div>
+    </footer>
+    </body>
+    </html>
